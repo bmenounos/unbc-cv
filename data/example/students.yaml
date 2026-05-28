@@ -1,0 +1,314 @@
+# Graduate student supervision
+# finish: null = ongoing, "withdrew" = withdrew, "YYYY-MM" = completed
+# role: principal or committee
+# university: home university if not UNBC
+
+graduate:
+  - name: "Hrankowsko, Katrial"
+    program: MSc
+    department: Physics
+    start: "2025-09"
+    finish: null
+    supervisors: ["Reid", "Menounos"]
+    committee: ["Benier"]
+  - name: "Cowie, Natasha"
+    program: PhD
+    department: NRES
+    start: "2025-09"
+    finish: null
+    supervisors: ["Menounos"]
+    committee: ["TBD"]
+  - name: "Cook, Chelsea"
+    program: MSc
+    department: NRES
+    start: "2025-09"
+    finish: null
+    supervisors: ["Menounos"]
+    committee: ["TBD"]
+  - name: "Griffiths, Eva"
+    program: MSc
+    department: NRES
+    start: "2025-09"
+    finish: null
+    supervisors: ["Menounos"]
+    committee: ["TBD"]
+  - name: "Bourque, Charlie"
+    program: MSc
+    department: NRES
+    start: "2021-09"
+    finish: "2025-06"
+    supervisors: ["Menounos"]
+    committee: ["Wood", "Shea"]
+  - name: "Townsend, James"
+    program: PhD
+    department: NRES
+    start: "2020-09"
+    finish: withdrew
+    supervisors: ["Menounos"]
+    committee: ["Gardner (NASA)", "Flowers (SFU)"]
+  - name: "Mathias, Caleb"
+    program: MSc
+    department: NRES
+    start: "2021-09"
+    finish: "2025-05"
+    supervisors: ["Menounos"]
+    committee: ["Wheate", "Schaefer (Lamont Doherty Earth Observatory)"]
+  - name: "Gallegos, Sergio"
+    program: MSc
+    department: NRES
+    start: "2018-09"
+    finish: "2024-05"
+    supervisors: ["Menounos", "Shea"]
+    committee: ["Déry"]
+  - name: "Hawkins, Adam"
+    program: PhD
+    department: NRES
+    start: "2015-09"
+    finish: "2023-12"
+    supervisors: ["Menounos"]
+    committee: ["Osborn (U of C)", "Goehring (Tulane U)"]
+  - name: "Bevington, Alex"
+    program: PhD
+    department: NRES
+    start: "2016-09"
+    finish: null
+    supervisors: ["Menounos", "Geertsema"]
+    committee: ["Rabus (SFU)", "Kääb (Norway)"]
+  - name: "Mortezepour, Marzieh"
+    program: PhD
+    department: NRES
+    start: "2014-09"
+    finish: "2020-12"
+    supervisors: ["Menounos", "Jackson"]
+    committee: ["Radic", "Dery", "Tang"]
+  - name: "Pelto, Ben"
+    program: PhD
+    department: NRES
+    start: "2014-09"
+    finish: "2020-11"
+    supervisors: ["Menounos"]
+    committee: ["Marshall", "Wheate", "Dery", "Jackson"]
+  - name: "Tennant, Christina"
+    program: PhD
+    department: NRES
+    start: "2018-01"
+    finish: withdrew
+    supervisors: ["Menounos"]
+    committee: ["Gardner (NASA)", "Berthier (Tolouse)", "Shea (Geog)"]
+  - name: "Faber, Audrey"
+    program: MSc
+    department: NRES
+    start: "2017-09"
+    finish: "medical withdraw"
+    supervisors: ["Menounos"]
+    committee: ["Lian (UFV)", "Owens"]
+  - name: "Beedle, Matt"
+    program: PhD
+    department: NRES
+    start: "2007-01"
+    finish: "2013-12"
+    supervisors: ["Menounos", "Wheate"]
+    committee: ["Marshall (U of C)", "Jackson"]
+  - name: "Vogt, Robert"
+    program: MSc
+    department: NRES
+    start: "2010-09"
+    finish: "2014-11"
+    supervisors: ["Menounos"]
+    committee: ["Reid (UBC)", "Jackson"]
+  - name: "Maurer, Malyssa"
+    program: MSc
+    department: NRES
+    start: "2009-09"
+    finish: "2015-01"
+    supervisors: ["Menounos"]
+    committee: ["Clague (SFU)", "Osborn (U of C)"]
+  - name: "Mlynowski, Theo"
+    program: MSc
+    department: NRES
+    start: "2010-09"
+    finish: "2013-09"
+    supervisors: ["Menounos"]
+    committee: ["Owens", "Wheate"]
+  - name: "Carlson, Teresa"
+    program: MSc
+    department: NRES
+    start: "2009-09"
+    finish: "2012-12"
+    supervisors: ["Menounos"]
+    committee: ["Jackson", "Moore (UBC)"]
+  - name: "Przeczek, Kara"
+    program: MSc
+    department: NRES
+    start: "2007-01"
+    finish: "2011-01"
+    supervisors: ["Menounos", "Dery"]
+    committee: ["Moore (UBC)"]
+  - name: "Heideman, Marit"
+    program: PhD
+    university: SFU
+    start: "2006-09"
+    finish: "2013-09"
+    supervisors: ["Clague", "Menounos"]
+    committee: ["Hickson (NRCan)"]
+  - name: "Grubb, Melanie"
+    program: MSc
+    department: NRES
+    start: "2006-09"
+    finish: withdrew
+    supervisors: ["Menounos"]
+    committee: ["Petticrew", "Gilbert"]
+  - name: "Cryane, Chanone"
+    program: MSc
+    university: "U of C"
+    start: "2005-09"
+    finish: "2009-05"
+    supervisors: ["Osborn", "Menounos"]
+    committee: []
+  - name: "Bruchert, Lorenz"
+    program: "Thesis (MA)"
+    university: null
+    start: "2005-09"
+    finish: "2012-05"
+    supervisors: ["Menounos", "Rahemtulla"]
+    committee: ["Arocena"]
+  - name: "Jerymn, Courtney"
+    program: MSc
+    department: NRES
+    start: "2005-09"
+    finish: "2010-06"
+    supervisors: ["Menounos"]
+    committee: ["Wheate", "Clague Geertsema", "Bobrowsky"]
+  - name: "Lakeman, Tom"
+    program: MSc
+    university: SFU
+    start: "2005-09"
+    finish: "2006-10"
+    supervisors: ["Clague", "Menounos"]
+    committee: ["Ward"]
+  - name: "Minkus, Ryan"
+    program: MSc
+    university: "U of C"
+    start: "2005-09"
+    finish: "2006-11"
+    supervisors: ["Osborn", "Menounos"]
+    committee: []
+  - name: "Brahney, Janice"
+    program: MSc
+    university: SFU
+    start: "2005-09"
+    finish: "2007-03"
+    supervisors: ["Clague", "Menounos", "Edwards"]
+    committee: []
+
+research_associates:
+  - name: "Hugonnet, Romain"
+    start: "2018-01"
+    finish: "2020-12"
+
+postdoctoral_fellows:
+  - name: "Devaux-Chupin, Victor"
+    start: "2026-01"
+    finish: null
+    cosupervisors: []
+  - name: "Onwukwe, Chibuike"
+    start: "2025-10"
+    finish: null
+    cosupervisors: []
+  - name: "Donahue, Christopher"
+    start: "2022-08"
+    finish: "2023-05"
+    cosupervisors: []
+  - name: "Onwukwe, Chibuike"
+    start: "2022-08"
+    finish: "2023-03"
+    cosupervisors: []
+  - name: "Choe, Hun"
+    start: "2022-01"
+    finish: "2023-03"
+    cosupervisors: []
+  - name: "Steelquist, Aaron"
+    start: "2022-01"
+    finish: "2024-09"
+    cosupervisors: ["Venditti, J. (Simon Fraser University)"]
+  - name: "Marchenko, Sergey"
+    start: "2022-01"
+    finish: null
+    cosupervisors: ["Floyd, B. (Vancouver Island University)"]
+  - name: "Biset, Rosie"
+    start: "2022-01"
+    finish: "2024-12"
+    cosupervisors: ["Floyd, B. (Vancouver Island University)"]
+  - name: "Onwukwe, Chibuike"
+    start: "2020-07"
+    finish: "2022-06"
+    cosupervisors: ["Jackson, P.", "Dery, S."]
+  - name: "Islam, Siraj"
+    start: "2018-07"
+    finish: "2019-07"
+    cosupervisors: ["Jackson, P.", "Dery, S."]
+  - name: "Chesnokova, Anna"
+    start: "2020-05"
+    finish: "2022-07"
+    cosupervisors: ["Shea, J."]
+  - name: "Bendle, Jacob"
+    start: "2020-03"
+    finish: "2022-03"
+    cosupervisors: []
+  - name: "Williamson, Scott"
+    start: "2019-09"
+    finish: "2020-08"
+    cosupervisors: []
+  - name: "Brahmbhat, Rupal"
+    start: "2019-05"
+    finish: "2019-09"
+    cosupervisors: []
+  - name: "Mukherjee, Kriti"
+    start: "2018-05"
+    finish: "2020-05"
+    cosupervisors: []
+  - name: "Darvill, Chris"
+    start: "2016-01"
+    finish: "2017-08"
+    cosupervisors: []
+  - name: "Ponce, Federico"
+    start: "2014-05"
+    finish: "2014-11"
+    cosupervisors: []
+  - name: "Fernandez, Marilen"
+    start: "2014-05"
+    finish: "2014-11"
+    cosupervisors: []
+  - name: "Beedle, Matthew"
+    start: "2013-12"
+    finish: "2014-06"
+    cosupervisors: []
+  - name: "Shea, Joe"
+    start: "2010-01"
+    finish: "2012-07"
+    cosupervisors: []
+  - name: "Bolch, Tobias"
+    start: "2007-08"
+    finish: "2008-07"
+    cosupervisors: []
+  - name: "Schiefer, Erik"
+    start: "2006-07"
+    finish: "2007-04"
+    cosupervisors: []
+
+supervisory_committee:
+  - name: "Bishop, Ali"
+    supervisors: ["Shea, Joseph", "Floyd, Bill"]
+    program: MSc
+    start: "2022-01"
+    finish: "2024-05"
+  - name: "Hay, Rachel"
+    supervisors: ["Dery, Stephen"]
+    program: MSc
+    start: "2016-01"
+    finish: "2020-05"
+  - name: "Sharma, Aseem"
+    supervisors: ["Dery, Stephen"]
+    program: PhD
+    start: "2015-09"
+    finish: "2020-05"

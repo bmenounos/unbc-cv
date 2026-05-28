@@ -1,0 +1,71 @@
+# Awards and distinctions
+# Section 12 of UNBC CV format
+# year/month: when received; start/end: for range-type awards
+# month is 1-indexed (4 = April)
+
+teaching: []
+
+scholarship:
+  - name: "CUFA-BC Ehor Boyanowsky Academic of the Year Award"
+    organization: "Confederation of University Faculty Associations of BC (CUFA-BC)"
+    year: 2019
+    month: 4
+    note: "Recognizes a specific and recent outstanding contribution to the community beyond the academy through research; given each year to one professor from BC universities."
+  - name: "UNBC NRESi Distinguished Scholar Award"
+    organization: "University of Northern British Columbia"
+    year: 2018
+    month: 3
+  - name: "Canadian Geophysical Union Young Scientist Medal"
+    organization: "Canadian Geophysical Union"
+    year: 2012
+    note: "Recognizes outstanding research contributions by a young CGU scientist; quality and impact of research are considered."
+  - name: "Hydrologic Processes article cited as top 10 paper (Elsevier)"
+    organization: "Elsevier"
+    year: 2009
+    note: "Moore et al. (2009), Hydrologic Processes — see publication #23."
+  - name: "UNBC Research Excellence Award"
+    organization: "University of Northern British Columbia"
+    year: 2009
+    month: 5
+  - name: "J. Ross Mackay Medal"
+    organization: "Canadian Geomorphology Research Group"
+    year: 2008
+    month: 5
+    note: "Given for a significant contribution to geomorphology by a young Canadian earth scientist."
+  - name: "University Merit Awards for Research"
+    organization: "University of Northern British Columbia"
+    start: 2004
+    end: 2008
+    note: "University abandoned merit awards after 2008."
+  - name: "University Graduate Fellowship"
+    organization: "University of British Columbia"
+    start: 1999
+    end: 2000
+  - name: "Phi Beta Kappa"
+    organization: "University of Colorado, Boulder"
+    year: 1994
+  - name: "Summa cum Laude"
+    organization: "University of Colorado, Boulder"
+    year: 1994
+  - name: "Meyer's Award for Outstanding Honors Thesis"
+    organization: "University of Colorado, Boulder"
+    year: 1994
+
+service:
+  - name: "United Nations University Institute for Water, Environment & Health Medal"
+    organization: "United Nations University Institute for Water, Environment & Health (UNU-INWEH)"
+    year: 2025
+    note: "For exceptional personal commitment to the success of the United Nations International Year of Glaciers' Preservation 2025 Initiative in Canada."
+  - name: "BC Parks Volunteer of the Year Award"
+    organization: "BC Parks"
+    year: 2023
+    note: "For work with BC Parks on the Mount Robson trail rebuild/redesign following the 2021 Heat Dome."
+  - name: "Editors' Citation for Excellence in Refereeing for Eos"
+    organization: "American Geophysical Union"
+    year: 2011
+    month: 8
+    note: "2010 citation, awarded August 2011."
+  - name: "Most Valued Referee for Catena"
+    organization: "Catena (Elsevier)"
+    year: 2010
+    month: 3

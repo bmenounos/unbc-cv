@@ -1,0 +1,75 @@
+# Courses taught at UNBC
+# Section 8 of UNBC CV format
+# sessions: most recent first
+# labs/tutorials/other: null = not applicable
+# year_start/year_end: used instead of year when a session spans multiple years
+
+course_descriptions:
+  GEOG-100:  "Environments and People — The Geography of Natural Hazards. Introduces geophysical processes that pose risk to humans, including earthquakes, volcanoes, floods, landslides, coastal processes, climate change, and severe weather events."
+  GEOG-111:  "Theory and Practice of Physical Geography. Allows new BSc Geography majors to develop student and faculty contacts and improve mentoring and degree advising."
+  GEOG-210:  "Introduction to Geomorphology. Introductory course on how surface processes operate to create the diverse landscape we see today."
+  GEOG-310:  "Introduction to Hydrology. The physical properties of water, its variable states, and interaction with the atmosphere, biota, surface, and subsurface of the earth."
+  GEOG-311:  "Drainage Basin Geomorphology. Focuses on hillslope and fluvial processes in drainage basins; laboratory exercises emphasize analytical and statistical techniques."
+  GEOG-333:  "Special Topics in Physical Geography."
+  GEOG-411/611: "Quaternary and Surficial Geology. Major processes that have shaped the landscape of western Canada over the past two million years. Topics include ice dynamics, glacier mass balance, radiometric dating, and methods of paleo-environmental reconstruction."
+  GEOG-430:  "Undergraduate Thesis (two semesters for 5.0 hours/week)."
+  GEOG-499/699: "Directed Readings / Special Topics."
+  NRES-705:  "Graduate seminar."
+  NRES-763:  "Graduate special topics."
+  NRES-798:  "Graduate directed readings."
+  NRES-799:  "Graduate directed readings."
+  NRES-804:  "Graduate seminar."
+
+sessions:
+  - {year: 2022, term: Winter,  code: "GEOG-311",         scheduled_hours: 5.0, class_size: 3,   lectures: 3.0, tutorials: 2.0, labs: null, other: null}
+  - {year: 2020, term: Autumn,  code: "GEOG-411/611",     scheduled_hours: 5.0, class_size: 5,   lectures: 3.0, tutorials: 2.0, labs: null, other: null}
+  - {year: 2020, term: Autumn,  code: "GEOG-111",         scheduled_hours: 1.0, class_size: 5,   lectures: 1.0, tutorials: null, labs: null, other: null}
+  - {year: 2018, term: Autumn,  code: "GEOG-411/611",     scheduled_hours: 5.0, class_size: 7,   lectures: 3.0, tutorials: 2.0, labs: null, other: null}
+  - {year: 2018, term: Spring,  code: "GEOG-333/NRES-763",scheduled_hours: 3.0, class_size: 6,   lectures: 3.0, tutorials: null, labs: null, other: 3.0}
+  - {year: 2017, term: Spring,  code: "GEOG-499/699",     scheduled_hours: 3.0, class_size: 4,   lectures: 3.0, tutorials: null, labs: null, other: 3.0}
+  - {year: 2017, term: Winter,  code: "GEOG-311",         scheduled_hours: 5.0, class_size: 5,   lectures: 3.0, tutorials: 2.0, labs: null, other: null}
+  - {year: 2016, term: Spring,  code: "GEOG-499/699",     scheduled_hours: 3.0, class_size: 4,   lectures: 3.0, tutorials: null, labs: null, other: 3.0, note: sabbatical}
+  - {year: 2015, term: Spring,  code: "GEOG-333",         scheduled_hours: 3.0, class_size: 9,   lectures: null, tutorials: null, labs: null, other: 3.0}
+  - {year: 2015, term: Fall,    code: "GEOG-111",         scheduled_hours: 1.0, class_size: 5,   lectures: 1.0, tutorials: null, labs: null, other: null}
+  - {year: 2014, term: Fall,    code: "GEOG-210",         scheduled_hours: 5.0, class_size: 96,  lectures: 2.0, tutorials: null, labs: null, other: null}
+  - {year: 2014, term: Fall,    code: "GEOG-100",         scheduled_hours: 3.0, class_size: 90,  lectures: 3.0, tutorials: null, labs: null, other: null}
+  - {year: 2014, term: Winter,  code: "GEOG-311",         scheduled_hours: 5.0, class_size: 5,   lectures: 2.0, tutorials: null, labs: null, other: 3.0}
+  - {year: 2012, term: Fall,    code: "GEOG-100",         scheduled_hours: 3.0, class_size: 108, lectures: 3.0, tutorials: null, labs: null, other: null}
+  - {year: 2012, term: Fall,    code: "GEOG-111",         scheduled_hours: 1.0, class_size: 8,   lectures: 1.0, tutorials: null, labs: null, other: null}
+  - {year: 2012, term: Winter,  code: "GEOG-311",         scheduled_hours: 5.0, class_size: 5,   lectures: 2.0, tutorials: null, labs: 3.0, other: null}
+  - {year: 2011, term: Fall,    code: "NRES-705",         scheduled_hours: 3.0, class_size: 16,  lectures: 2.0, tutorials: null, labs: null, other: null}
+  - {year: 2011, term: Fall,    code: "GEOG-100",         scheduled_hours: 3.0, class_size: 122, lectures: 3.0, tutorials: null, labs: null, other: null}
+  - {year: 2011, term: Winter,  code: "GEOG-311",         scheduled_hours: 5.0, class_size: 7,   lectures: 2.0, tutorials: null, labs: 3.0, other: null}
+  - {year: 2010, term: Fall,    code: "GEOG-611",         scheduled_hours: 3.0, class_size: 3,   lectures: 2.0, tutorials: null, labs: 3.0, other: null}
+  - {year: 2010, term: Fall,    code: "GEOG-411",         scheduled_hours: 3.0, class_size: 5,   lectures: 2.0, tutorials: null, labs: 3.0, other: null}
+  - {year: 2010, term: Fall,    code: "GEOG-111",         scheduled_hours: 1.0, class_size: 6,   lectures: 1.0, tutorials: null, labs: null, other: null}
+  - {year: 2010, term: Fall,    code: "GEOG-100",         scheduled_hours: 3.0, class_size: 89,  lectures: 3.0, tutorials: null, labs: null, other: null}
+  - {year: 2010, term: Winter,  code: "GEOG-311",         scheduled_hours: 5.0, class_size: 6,   lectures: 2.0, tutorials: null, labs: 3.0, other: null}
+  - {year: 2008, term: Fall,    code: "GEOG-100",         scheduled_hours: 3.0, class_size: 100, lectures: 3.0, tutorials: null, labs: null, other: null}
+  - {year: 2008, term: Fall,    code: "GEOG-411",         scheduled_hours: 5.0, class_size: 7,   lectures: 2.5, tutorials: null, labs: 2.5, other: null}
+  - {year: 2008, term: Winter,  code: "NRES-798",         scheduled_hours: 1.0, class_size: 8,   lectures: 1.0, tutorials: null, labs: null, other: null}
+  - {year: 2008, term: Winter,  code: "NRES-804",         scheduled_hours: 1.0, class_size: 8,   lectures: 1.0, tutorials: null, labs: null, other: null}
+  - {year: 2008, term: Winter,  code: "GEOG-310",         scheduled_hours: 5.0, class_size: 11,  lectures: 2.5, tutorials: null, labs: 2.5, other: null}
+  - {year: 2008, term: Winter,  code: "GEOG-311",         scheduled_hours: 5.0, class_size: 10,  lectures: 2.5, tutorials: null, labs: 2.5, other: null}
+  - {year: 2007, term: Fall,    code: "GEOG-100",         scheduled_hours: 3.0, class_size: 98,  lectures: 3.0, tutorials: null, labs: null, other: null}
+  - {year: 2007, term: Fall,    code: "NRES-705",         scheduled_hours: 1.0, class_size: 5,   lectures: 1.0, tutorials: null, labs: null, other: null}
+  - {year: 2007, term: Winter,  code: "NRES-799",         scheduled_hours: 3.0, class_size: 2,   lectures: null, tutorials: 3.0, labs: null, other: null, note: "parental leave — evening meetings with students"}
+  - {year: 2006, term: Fall,    code: "GEOG-411",         scheduled_hours: 5.0, class_size: 9,   lectures: 2.5, tutorials: null, labs: 2.5, other: null}
+  - {year: 2006, term: Fall,    code: "GEOG-611",         scheduled_hours: 5.0, class_size: 1,   lectures: 2.5, tutorials: null, labs: 2.5, other: null}
+  - {year: 2006, term: Summer,  code: "GEOG-333",         scheduled_hours: 5.0, class_size: 4,   lectures: null, tutorials: null, labs: null, other: 5.0}
+  - {year: 2006, term: Winter,  code: "GEOG-311",         scheduled_hours: 5.0, class_size: 11,  lectures: 2.5, tutorials: null, labs: 2.5, other: null}
+  - {year: 2006, term: Winter,  code: "GEOG-611",         scheduled_hours: 5.0, class_size: 1,   lectures: 2.5, tutorials: null, labs: 2.5, other: null}
+  - {year: 2005, term: Fall,    code: "NRES-705",         scheduled_hours: 3.0, class_size: 4,   lectures: 3.0, tutorials: null, labs: null, other: null}
+  - {year: 2005, term: Winter,  code: "GEOG-311",         scheduled_hours: 5.0, class_size: 12,  lectures: 2.5, tutorials: null, labs: 2.5, other: null}
+  - {year: 2004, term: Fall,    code: "GEOG-411",         scheduled_hours: 5.0, class_size: 7,   lectures: 2.5, tutorials: null, labs: 2.5, other: null}
+  - {year: 2004, term: Winter,  code: "GEOG-100",         scheduled_hours: 3.0, class_size: 8,   lectures: 3.0, tutorials: null, labs: null, other: null}
+  - {year: 2003, term: Fall,    code: "GEOG-310",         scheduled_hours: 5.0, class_size: 6,   lectures: 2.5, tutorials: null, labs: 2.5, other: null}
+  - {year: 2003, term: Winter,  code: "GEOG-311",         scheduled_hours: 5.0, class_size: 20,  lectures: 2.5, tutorials: null, labs: 2.5, other: null}
+  - {year: 2003, term: Winter,  code: "GEOG-210",         scheduled_hours: 3.0, class_size: 99,  lectures: 3.0, tutorials: null, labs: null, other: null}
+  - {year_start: 2003, year_end: 2012, term: null, code: "GEOG-430", scheduled_hours: 10.0, class_size: 8, lectures: null, tutorials: null, labs: null, other: 6.0, note: "Undergraduate thesis; two semesters at 5.0 h/week"}
+
+notes:
+  - "Courses ending in '99' are independent study courses. GEOG-430 is an undergraduate thesis."
+  - "Courses starting with '6' are graduate course equivalents to 400-level courses; lectures/labs taught simultaneously."
+  - "Courses starting with '7' are graduate courses."
+  - "On sabbatical January–July 2013 and January–December 2009 (no formal teaching commitments)."

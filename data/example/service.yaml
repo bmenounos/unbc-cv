@@ -1,0 +1,371 @@
+# Service activities
+# Sections follow UNBC CV format (10a, 10b, 11a-i)
+# end: null = ongoing
+
+# ── 10. SERVICE TO THE UNIVERSITY ────────────────────────────────────────────
+
+university_committees:
+  - name: UNBC Faculty Association President
+    start: "2021-02"
+    end: null
+  - name: UNBC Faculty Association Vice President
+    start: "2021-07"
+    end: "2021-02"
+  - name: UNBC Faculty Association Executive Committee
+    start: "2019"
+    end: null
+  - name: CUFA BC Council Member
+    start: "2021-05"
+    end: null
+  - name: CUFA BC Working Group on Gendered Impacts of COVID-19 in the Academy
+    start: "2021-01"
+    end: null
+  - name: UNBC Tenure and Promotions Committee FA representative
+    start: "2021"
+    end: "2021"
+  - name: HPC SLI Hiring Committee
+    start: "2021"
+    end: "2021"
+  - name: High Performance Computing Committee Member (Chair 2011, Chair 2019-present)
+    start: "2008"
+    end: "2011"
+  - name: High Performance Computing Committee Chair
+    start: "2019"
+    end: null
+  - name: UNBC PICS Coordinator Hiring Committee
+    start: "2015-10"
+    end: "2015-10"
+  - name: UNBC Senate
+    start: "2015"
+    end: "2018"
+  - name: Faculty Association certification drive and communications committee
+    start: "2013"
+    end: "2014"
+  - name: Thesis Defense Chair, MSc NRES
+    start: "2015-05"
+    end: "2015-05"
+  - name: Thesis Defense Chair, MSc Physics
+    start: "2014-11"
+    end: "2014-11"
+  - name: Acting Program Chair of Geography
+    start: "2014-09"
+    end: "2014-09"
+  - name: NRESI Director Search Committee
+    start: "2014"
+    end: "2014"
+  - name: Foundation Year Steering Committee
+    start: "2013"
+    end: "2015"
+  - name: NRES Graduate Committee
+    start: "2012"
+    end: "2012"
+  - name: Seed Grant Committee
+    start: "2011"
+    end: "2015"
+  - name: Graduate Scholarship Committee
+    start: "2010"
+    end: "2010"
+  - name: Graduate Student Travel Grant Committee
+    start: "2010"
+    end: "2010"
+  - name: University Promotion and Tenure Appeal Committee
+    start: "2010"
+    end: "2010"
+  - name: University Research Excellence Committee
+    start: "2010"
+    end: "2011"
+  - name: Curriculum Chair for BSc Geography
+    start: "2010"
+    end: "2019"
+  - name: Geography Representative for ENSC Curriculum Committee
+    start: "2010"
+    end: "2016"
+  - name: Pacific Institute for Climate Solutions (PICS) Program Committee
+    start: "2009"
+    end: "2010"
+  - name: Pacific Institute for Climate Solutions (PICS) Program Committee
+    start: "2015"
+    end: null
+  - name: Proposal writing and mentorship program, Office of Research
+    start: "2009"
+    end: "2009"
+  - name: NSERC Scholarship Committee
+    start: "2008"
+    end: "2008"
+  - name: College and Promotion and Tenure Committee (rotating member)
+    start: "2008"
+    end: "2008"
+  - name: Ad Hoc Committee for Evaluation of Teaching
+    start: "2007"
+    end: "2008"
+  - name: BSc Geography Curriculum Chair
+    start: "2004"
+    end: "2008"
+  - name: Association of Professional Engineers and Geoscientists of BC (APEG-BC) University Representative
+    start: "2004"
+    end: null
+  - name: UNBC High Performance Computing (HPC) Board of Directors
+    start: "2005"
+    end: "2008"
+  - name: Natural Resources and Environmental Studies Institute Steering Committee
+    start: "2005"
+    end: "2008"
+  - name: Laboratory Safety Committee
+    start: "2004"
+    end: null
+  - name: Biology Appointment Selection Committee
+    start: "2004"
+    end: null
+  - name: Dean of Enrollment Appointment Selection Committee
+    start: "2006"
+    end: "2006"
+  - name: Geography Appointment Selection Committee
+    start: "2004"
+    end: "2017"
+  - name: UNBC Undergraduate Scholarship Selection Committee
+    start: "2005"
+    end: "2005"
+
+university_other:
+  - "University Representative, Strategic Planning Meeting for Geoscience BC (Sept. 2006)"
+  - "University Representative, Mountain Pine Beetle Geoscience/Mineral Sector Strategy (Sept. 2006)"
+  - "Career Night co-organizer (Geography and Environmental Science) — 2006, 2010-2016, 2020"
+  - "UNBC representative for West Grid-Western Canada Research Grid ($50 million supercomputing center)"
+
+# ── 11. SERVICE TO THE COMMUNITY ─────────────────────────────────────────────
+
+scholarly_societies:
+  - name: "Glacier mass balance intercomparison exercise (Glambie2) scientific steering board"
+    start: "2022"
+    end: null
+  - name: "Year of Glacier Preservation (Canada), Steering Committee"
+    start: "2024"
+    end: "2025"
+  - name: "UN Year of Glacier Preservation, Scientific Committee"
+    start: "2024"
+    end: "2025"
+  - name: "Canadian National Committee of the UNESCO International Geoscience Programme (IGCP)"
+    start: "2014"
+    end: "2017"
+  - name: "International Association of Hydrologic Sciences (IAHS) Working Group on Mountain Hydrology"
+    start: "2014"
+    end: null
+  - name: "Scientific Board Member, UNESCO's IGCP"
+    start: "2013"
+    end: "2017"
+  - name: "Past President, Canadian Geomorphology Research Group"
+    start: "2013"
+    end: "2014"
+  - name: "President, Canadian Geomorphology Research Group"
+    start: "2012"
+    end: "2013"
+  - name: "Vice President, Canadian Geomorphology Research Group"
+    start: "2011"
+    end: "2012"
+  - name: "Member, International Quaternary Union"
+    start: "2000"
+    end: null
+  - name: "Member, Geological Society of America"
+    start: "1994"
+    end: null
+  - name: "Member, American Geophysical Union"
+    start: "1994"
+    end: null
+  - name: "Member, Canadian Geomorphology Research Group"
+    start: "2003"
+    end: null
+  - name: "Member, Canadian Geophysical Union Glacier Committee"
+    start: "2006"
+    end: "2010"
+  - name: "Member, Canadian Geophysical Union"
+    start: "2003"
+    end: null
+
+scholarly_committees:
+  - name: "Association of Professional Engineers and Geoscientists of BC (APEG-BC) Climate Change Advisory Committee"
+    start: "2015"
+    end: null
+
+other_committees:
+  - name: "NSERC Discovery Grants Selection Committee 1506 Geoscience — Co-Chair"
+    start: "2021"
+    end: null
+    notes: "Co-Chair 2022, 2023, 2025"
+  - name: "University of British Columbia Okanagan — Columbia Basin Water Science Project Advisory Committee"
+    start: "2012"
+    end: null
+  - name: "Compute Canada Resource Allocation Committee"
+    start: "2011"
+    end: "2020"
+  - name: "Technical Advisory Committee for BC Hydro and the Pacific Climate Impacts Consortium"
+    start: "2009"
+    end: "2011"
+  - name: "Columbia Basin Trust Community Based Climate Change Advisory Committee"
+    start: "2007"
+    end: null
+  - name: "Columbia Basin Trust Scientific Steering Committee Member"
+    start: "2006"
+    end: null
+  - name: "Columbia Basin Trust Cryospheric Committee"
+    start: "2013"
+    end: null
+  - name: "Columbia Basin International Conference Oversight Committee"
+    start: "2013"
+    end: null
+
+editorships:
+  - journal: "The Cryosphere"
+    role: Associate Editor
+    start: "2026"
+    end: null
+  - journal: "Annals of Glaciology"
+    role: Associate Editor
+    subject: "Vanishing glaciers"
+    start: "2025"
+    end: null
+  - journal: "Journal of Fish and Wildlife"
+    role: Subject Editor
+    subject: "glacier and climatic change"
+    start: null
+    end: null
+  - journal: "Quaternary Science Reviews"
+    role: Guest Editor
+    subject: "Holocene Glaciers Fluctuations"
+    start: "2007-07"
+    end: "2009-05"
+
+journal_reviews:
+  - journal: "Annals of Glaciology"
+    years: [2001]
+  - journal: "Arctic, Antarctic, and Alpine Research"
+    years: [2002, 2003, 2006, 2007]
+  - journal: "Canadian Water Resources Journal"
+    years: [2003]
+  - journal: "Canadian Journal of Earth Sciences"
+    years: [2011, 2016]
+  - journal: Catena
+    years: [2009]
+  - journal: "Climatic Change"
+    years: [2012]
+  - journal: "Earth Surface Processes and Landforms"
+    years: [2008, 2013]
+  - journal: EOS
+    years: [2009, 2010]
+  - journal: Geology
+    years: [2009, 2016]
+  - journal: "Geografiska Annaler, Series A"
+    years: [2010]
+  - journal: "Geophysical Research Letters"
+    years: [2005, 2011]
+  - journal: "Global and Planetary Change"
+    years: [2010, 2012]
+  - journal: Holocene
+    years: [2014]
+  - journal: "Hydrologic Processes"
+    years: [2007, 2008, 2012]
+  - journal: "International Journal of Climatology"
+    years: [2016]
+  - journal: "Journal of Geophysical Research — Earth Surface"
+    years: [2014]
+  - journal: "Journal of Paleolimnology"
+    years: [2005, 2008]
+  - journal: "Journal of Glaciology"
+    years: [2013, 2016, 2021]
+  - journal: Nature
+    years: [2014]
+  - journal: "Nature Communications"
+    years: [2019]
+  - journal: "Quaternary Research"
+    years: [2004, 2007, 2008, 2009, 2019]
+  - journal: "Quaternary Science Reviews"
+    years: [2009, 2012]
+  - journal: Science
+    years: [2010]
+  - journal: "The Cryosphere"
+    years: [2009, 2015, 2017, 2018, 2018, 2024, 2024, 2026, 2026]
+
+grant_reviews:
+  - agency: "NSERC Discovery"
+    years: [2020, 2021]
+  - agency: "NERC major initiative grant"
+    years: [2018]
+  - agency: "University of Lethbridge"
+    years: [2018]
+  - agency: "Mitacs Accelerate Program"
+    years: [2016]
+  - agency: "Chilean National Science and Technology Commission (FONDECYT)"
+    years: [2015]
+  - agency: "National Science Foundation"
+    years: [2014, 2015]
+  - agency: "UNESCO International Geoscience Programme"
+    years: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+    note: "Each year reviewed 4-6 research proposals"
+  - agency: "Swiss National Science Foundation"
+    years: [2008, 2013]
+  - agency: "Israel Science Foundation"
+    years: [2011]
+  - agency: "Austrian National Science Foundation — Elise Richter Program"
+    years: [2011]
+  - agency: "NSERC Discovery Grants Program"
+    years: [2003, 2011, 2012, 2016]
+  - agency: "Canada Research Chairs Program"
+    years: [2012, 2018]
+  - agency: "Compute Canada"
+    years: [2011, 2012, 2013, 2015]
+
+external_examining:
+  - institution: "University of Innsbruck"
+    type: "PhD Thesis"
+    year: 2025
+  - institution: "University of Ottawa"
+    type: "PhD Thesis"
+    year: 2022
+  - institution: "University of Alberta"
+    type: "PhD Thesis"
+    year: 2020
+  - institution: "University of Portland"
+    type: "MSc Thesis"
+    year: 2019
+  - institution: "University of Zürich, Department of Geography"
+    type: "Promotion to Full Professor"
+    year: 2019
+  - institution: "Lamont Doherty Earth Observatory, Columbia University"
+    type: "Promotion to Full Professor"
+    year: 2019
+  - institution: "Indiana University — Purdue University, Earth Sciences"
+    type: "Tenure and Promotion"
+    year: 2017
+  - institution: "Simon Fraser University, British Columbia"
+    type: "MSc Thesis"
+    years: [2003, 2005, 2001, 2015, 2019]
+  - institution: "University of Alberta"
+    type: "PhD Thesis"
+    year: 2015
+  - institution: "University of Calgary, Alberta"
+    type: "MSc Thesis"
+    year: 2011
+  - institution: "University of Dresden, Germany"
+    type: "Habilitation Thesis"
+    year: 2011
+  - institution: "University of Lethbridge"
+    type: "MSc Thesis"
+    year: 2006
+
+consultancies:
+  - organization: "Klohn Crippen Berger"
+    years: [2018]
+  - organization: "Northwest Hydraulic Consultants"
+    years: [2011, 2012, 2018, 2019, 2023]
+  - organization: "BGC Engineering"
+    years: [2011, 2012, 2014, 2018]
+  - organization: "Kokanee, Labatt Brewery"
+    years: [2015]
+  - organization: "Lorax Environmental"
+    years: [2017]
+
+community_other:
+  - "Royal Canadian Mounted Police — Provided geospatial data to help investigators on Tour Bus rollover accident, Columbia Icefield, summer 2020 (pro bono)"
+  - "BC Parks — Assisted collection of geospatial data and provided field visits to help with flooding in Mount Robson Provincial Park, Autumn 2021 (pro bono); Review work plan for Mt. Robson trail reconstruction and repair"
+  - "Emergency Management BC — Facilitated geospatial data acquisition following flooding in Fraser Canyon, November 2021 (pro bono)"
+  - "Emergency Management Climate Readiness — Facilitated geospatial data acquisition (Airborne Coastal Observatory) following Chilcotin landslide and outburst flood (pro bono)"
+  - "BC Emergency Management Climate Readiness (EMCR) and Squamish-Lillooet Regional District — Outburst flood geohazard, Place Glacier, June 2025 (pro bono)"

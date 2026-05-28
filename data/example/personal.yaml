@@ -1,0 +1,93 @@
+# Personal information, education, and employment
+# Dates: YYYY-MM format
+
+name:
+  surname: Menounos
+  first: Brian
+  middle: Peter
+
+orcid: "0000-0003-3022-7316"
+city: "Prince George, BC, Canada"
+
+department: Geography
+college: Science and Management
+present_rank: Full Professor
+rank_since: "2014-07"
+tenure_date: "2008-07"
+
+education:
+  - institution: University of British Columbia
+    degree: PhD
+    subject: Geography
+    start: 1996
+    end: 2002
+    thesis: "Climate, fine-sediment transport linkages, Coast Mountains, British Columbia, Canada"
+    supervisor: "Dr. Olav Slaymaker"
+  - institution: University of Colorado, Boulder
+    degree: MA
+    subject: Geography
+    start: 1994
+    end: 1996
+    thesis: "A Holocene debris flow chronology for an alpine catchment, Colorado Front Range"
+    supervisor: "Dr. Nelson Caine"
+  - institution: University of Colorado, Boulder
+    degree: BA (hons.)
+    subject: "Geography; minor Geology"
+    start: 1990
+    end: 1994
+    thesis: "The geomorphic significance of alpine debris flows in the Indian Peaks Wilderness, Colorado"
+    supervisor: "Dr. Nelson Caine"
+
+qualifications:
+  - "Licensed Professional Geoscientist (PGeo) — Association of Professional Engineers and Geoscientists of British Columbia (APEGBC), August 2014"
+
+employment_prior:
+  - institution: Simon Fraser University
+    title: Postdoctoral Fellow
+    start: "2002-04"
+    end: "2002-12"
+
+employment_unbc:
+  - title: Full Professor
+    start: "2014-07"
+    end: null
+  - title: Associate Professor
+    start: "2008-07"
+    end: "2014-06"
+  - title: Assistant Professor
+    start: "2002-12"
+    end: "2008-06"
+  - title: Adjunct Professor (U. Victoria)
+    start: "2009-12"
+    end: null
+
+leaves:
+  - institution: University of Northern British Columbia
+    type: Parental
+    start: "2007-01"
+    end: "2007-04"
+  - institution: University of Northern British Columbia
+    type: "Sabbatical"
+    start: "2009-01"
+    end: "2010-01"
+    note: "Visiting Professor, CADIC-Conicet, Ushuaia, Argentina (January-April, 2010)"
+  - institution: University of Northern British Columbia
+    type: Sabbatical
+    start: "2013-01"
+    end: "2013-07"
+    note: "Visiting Professor, Lamont Doherty Earth Observatory, Columbia University, New York (January, 2013); Visiting Research Scientist, Pacific Climate Impacts Consortium, Victoria (April-May, 2013)"
+  - institution: University of Northern British Columbia
+    type: Sabbatical
+    start: "2016-07"
+    end: "2016-12"
+    note: "Visiting Research Scientist, NASA, Jet Propulsion Laboratory, Pasadena CA (Aug-Nov, 2016)"
+  - institution: University of Northern British Columbia
+    type: Sabbatical
+    start: "2020-01"
+    end: "2020-06"
+    note: "Visiting Research Scientist, CNRS, Toulouse France (March, 2020)"
+  - institution: Government of Canada (NRCan)
+    type: "Secondment [Interchange]"
+    start: "2023-01"
+    end: "2025-12"
+    note: "Senior Research Scientist, Natural Resources Canada"

@@ -1,0 +1,11 @@
+.DS_Store
+.omc/
+memory.md
+# Generated outputs
+data/*/CCV.xml
+data/*/CCV_last6yrs.xml
+data/*/CV_*.pdf
+data/*/CV_*.tex
+data/*/CV_*.aux
+data/*/CV_*.log
+data/*/CV_*.out
