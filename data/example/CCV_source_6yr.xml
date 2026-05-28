@@ -4688,63 +4688,6 @@ single grains of sand</value>
           <value type="String">UNBC</value>
         </field>
       </section>
-      <section id="4b36fa1eef2549f6ab3a3df7c1c81e0b" label="Student/Postdoctoral Supervision" recordId="e16150be90e44218af48ec92f0048dd0">
-        <field id="78a3e68f1ab74f31b9284c2acdb70739" label="Supervision Role">
-          <lov id="00000000000000000000000100002900">Principal Supervisor</lov>
-        </field>
-        <field id="19964df0a8524f2bb44d5eb53729f9cc" label="Supervision Start Date">
-          <value format="yyyy/MM" type="YearMonth">2015/9</value>
-        </field>
-        <field id="bd3619f7970441dc83ada1d2fdbf0780" label="Supervision End Date">
-          <value format="yyyy/MM" type="YearMonth">2023/12</value>
-        </field>
-        <field id="3c504aafda28418ea439d8f92c28aef0" label="Student Name">
-          <value type="String">Hawkins, Adam</value>
-        </field>
-        <field id="e36ccf9a00a241dc942e608df32c8c84" label="Student Institution">
-          <value type="String">UNBC</value>
-        </field>
-        <field id="bb322e0195b540779bf4bdb4f1a04210" label="Student Canadian Residency Status" />
-        <field id="5b8638e8646448dcb8edef2c21e01c87" label="Degree Type or Postdoctoral Status">
-          <lov id="971953ad86ca49f3b32ac5c7c2758a1b">Doctorate</lov>
-        </field>
-        <field id="e5d331dca0fc4000992e43b695b2db21" label="Student Degree Status">
-          <lov id="00000000000000000000000000000068">Completed</lov>
-        </field>
-        <field id="3cf3d0de12f44222b941fdbf57ad51a6" label="Student Degree Start Date">
-          <value format="yyyy/MM" type="YearMonth">2015/9</value>
-        </field>
-        <field id="8284dbdd03aa4277b7fca7662bd1758c" label="Student Degree Received Date">
-          <value format="yyyy/MM" type="YearMonth">2023/12</value>
-        </field>
-        <field id="ab1293e2fee8472481457d4f8493c7f1" label="Student Degree Expected Date">
-          <value format="yyyy/MM" type="YearMonth" />
-        </field>
-        <field id="420e5bbd57104c3c9823b5e6850ee6f8" label="Thesis/Project Title">
-          <value type="String">Multiple geochronological approaches to constrain late Quaternary glacial histories in western Canada</value>
-        </field>
-        <field id="804797ed2fe54da88f326743e38e270e" label="Project Description">
-          <value type="Bilingual" />
-          <bilingual>
-            <french />
-            <english />
-          </bilingual>
-        </field>
-        <field id="0f2f1601c24144308e0966d75b781db9" label="Present Position">
-          <value type="String">Assistant Professor</value>
-        </field>
-        <field id="8789e49ef39b4249aa53d414045ebfd2" label="Degree Name">
-          <value type="Bilingual" />
-          <bilingual />
-        </field>
-        <field id="17957ada91964db18a3b0526f5b4e341" label="Specialization">
-          <value type="Bilingual" />
-          <bilingual />
-        </field>
-        <field id="c20e3ae276a2429d888ae8e16216182f" label="Present Organization">
-          <value type="String">UNBC</value>
-        </field>
-      </section>
       <section id="4b36fa1eef2549f6ab3a3df7c1c81e0b" label="Student/Postdoctoral Supervision" recordId="15e7aadba1104183b5e0f9b1d612a80c">
         <field id="78a3e68f1ab74f31b9284c2acdb70739" label="Supervision Role">
           <lov id="00000000000000000000000100002901">Co-Supervisor</lov>
@@ -5201,116 +5144,6 @@ single grains of sand</value>
           <value type="String">Stanford University</value>
         </field>
       </section>
-      <section id="4b36fa1eef2549f6ab3a3df7c1c81e0b" label="Student/Postdoctoral Supervision" recordId="9c62a257a2754d399a35cf375c5ccbc0">
-        <field id="78a3e68f1ab74f31b9284c2acdb70739" label="Supervision Role">
-          <lov id="00000000000000000000000100002901">Co-Supervisor</lov>
-        </field>
-        <field id="19964df0a8524f2bb44d5eb53729f9cc" label="Supervision Start Date">
-          <value format="yyyy/MM" type="YearMonth">2020/9</value>
-        </field>
-        <field id="bd3619f7970441dc83ada1d2fdbf0780" label="Supervision End Date">
-          <value format="yyyy/MM" type="YearMonth">2022/7</value>
-        </field>
-        <field id="3c504aafda28418ea439d8f92c28aef0" label="Student Name">
-          <value type="String">Chibuike Onwukwe</value>
-        </field>
-        <field id="e36ccf9a00a241dc942e608df32c8c84" label="Student Institution">
-          <value type="String">University of Northern British Columbia</value>
-        </field>
-        <field id="bb322e0195b540779bf4bdb4f1a04210" label="Student Canadian Residency Status" />
-        <field id="5b8638e8646448dcb8edef2c21e01c87" label="Degree Type or Postdoctoral Status">
-          <lov id="e0b26301c88d4be5a6f7143981c9b3bb">Post-doctorate</lov>
-        </field>
-        <field id="e5d331dca0fc4000992e43b695b2db21" label="Student Degree Status" />
-        <field id="3cf3d0de12f44222b941fdbf57ad51a6" label="Student Degree Start Date">
-          <value format="yyyy/MM" type="YearMonth" />
-        </field>
-        <field id="8284dbdd03aa4277b7fca7662bd1758c" label="Student Degree Received Date">
-          <value format="yyyy/MM" type="YearMonth" />
-        </field>
-        <field id="ab1293e2fee8472481457d4f8493c7f1" label="Student Degree Expected Date">
-          <value format="yyyy/MM" type="YearMonth" />
-        </field>
-        <field id="420e5bbd57104c3c9823b5e6850ee6f8" label="Thesis/Project Title">
-          <value type="String">Dynamical Downscaling in Northern British Columbia</value>
-        </field>
-        <field id="804797ed2fe54da88f326743e38e270e" label="Project Description">
-          <value type="Bilingual" />
-          <bilingual>
-            <french />
-            <english />
-          </bilingual>
-        </field>
-        <field id="0f2f1601c24144308e0966d75b781db9" label="Present Position">
-          <value type="String">Postdoctoral Fellow</value>
-        </field>
-        <field id="8789e49ef39b4249aa53d414045ebfd2" label="Degree Name">
-          <value type="Bilingual" />
-          <bilingual />
-        </field>
-        <field id="17957ada91964db18a3b0526f5b4e341" label="Specialization">
-          <value type="Bilingual" />
-          <bilingual />
-        </field>
-        <field id="c20e3ae276a2429d888ae8e16216182f" label="Present Organization">
-          <value type="String" />
-        </field>
-      </section>
-      <section id="4b36fa1eef2549f6ab3a3df7c1c81e0b" label="Student/Postdoctoral Supervision" recordId="dc13806b23374168909faea401c14d42">
-        <field id="78a3e68f1ab74f31b9284c2acdb70739" label="Supervision Role">
-          <lov id="00000000000000000000000100002901">Co-Supervisor</lov>
-        </field>
-        <field id="19964df0a8524f2bb44d5eb53729f9cc" label="Supervision Start Date">
-          <value format="yyyy/MM" type="YearMonth">2020/7</value>
-        </field>
-        <field id="bd3619f7970441dc83ada1d2fdbf0780" label="Supervision End Date">
-          <value format="yyyy/MM" type="YearMonth">2022/6</value>
-        </field>
-        <field id="3c504aafda28418ea439d8f92c28aef0" label="Student Name">
-          <value type="String">Anna Chesnokova</value>
-        </field>
-        <field id="e36ccf9a00a241dc942e608df32c8c84" label="Student Institution">
-          <value type="String">University of Northern British Columbia</value>
-        </field>
-        <field id="bb322e0195b540779bf4bdb4f1a04210" label="Student Canadian Residency Status" />
-        <field id="5b8638e8646448dcb8edef2c21e01c87" label="Degree Type or Postdoctoral Status">
-          <lov id="e0b26301c88d4be5a6f7143981c9b3bb">Post-doctorate</lov>
-        </field>
-        <field id="e5d331dca0fc4000992e43b695b2db21" label="Student Degree Status" />
-        <field id="3cf3d0de12f44222b941fdbf57ad51a6" label="Student Degree Start Date">
-          <value format="yyyy/MM" type="YearMonth" />
-        </field>
-        <field id="8284dbdd03aa4277b7fca7662bd1758c" label="Student Degree Received Date">
-          <value format="yyyy/MM" type="YearMonth" />
-        </field>
-        <field id="ab1293e2fee8472481457d4f8493c7f1" label="Student Degree Expected Date">
-          <value format="yyyy/MM" type="YearMonth" />
-        </field>
-        <field id="420e5bbd57104c3c9823b5e6850ee6f8" label="Thesis/Project Title">
-          <value type="String">Assimilation strategies of laser-derived snow depth, Lajoie Basin, southern Coast Mountains, Canada.</value>
-        </field>
-        <field id="804797ed2fe54da88f326743e38e270e" label="Project Description">
-          <value type="Bilingual" />
-          <bilingual>
-            <french />
-            <english />
-          </bilingual>
-        </field>
-        <field id="0f2f1601c24144308e0966d75b781db9" label="Present Position">
-          <value type="String">Postdoctoral Fellow</value>
-        </field>
-        <field id="8789e49ef39b4249aa53d414045ebfd2" label="Degree Name">
-          <value type="Bilingual" />
-          <bilingual />
-        </field>
-        <field id="17957ada91964db18a3b0526f5b4e341" label="Specialization">
-          <value type="Bilingual" />
-          <bilingual />
-        </field>
-        <field id="c20e3ae276a2429d888ae8e16216182f" label="Present Organization">
-          <value type="String">UNBC</value>
-        </field>
-      </section>
       <section id="4b36fa1eef2549f6ab3a3df7c1c81e0b" label="Student/Postdoctoral Supervision" recordId="a7a0dc73f93645beab0633d7332dd97f">
         <field id="78a3e68f1ab74f31b9284c2acdb70739" label="Supervision Role">
           <lov id="00000000000000000000000100002901">Co-Supervisor</lov>
@@ -5382,7 +5215,7 @@ single grains of sand</value>
           <value type="String">Chesnokova, Anna</value>
         </field>
         <field id="e36ccf9a00a241dc942e608df32c8c84" label="Student Institution">
-          <value type="String">UNBC</value>
+          <value type="String">Northwest Hydraulic Consultants</value>
         </field>
         <field id="bb322e0195b540779bf4bdb4f1a04210" label="Student Canadian Residency Status" />
         <field id="5b8638e8646448dcb8edef2c21e01c87" label="Degree Type or Postdoctoral Status">
@@ -5423,61 +5256,6 @@ single grains of sand</value>
         </field>
         <field id="c20e3ae276a2429d888ae8e16216182f" label="Present Organization">
           <value type="String">Northwest Hydraulic Consultants</value>
-        </field>
-      </section>
-      <section id="4b36fa1eef2549f6ab3a3df7c1c81e0b" label="Student/Postdoctoral Supervision" recordId="464b9d732a18457889f83fdefefdf2e3">
-        <field id="78a3e68f1ab74f31b9284c2acdb70739" label="Supervision Role">
-          <lov id="00000000000000000000000100002900">Principal Supervisor</lov>
-        </field>
-        <field id="19964df0a8524f2bb44d5eb53729f9cc" label="Supervision Start Date">
-          <value format="yyyy/MM" type="YearMonth">2020/3</value>
-        </field>
-        <field id="bd3619f7970441dc83ada1d2fdbf0780" label="Supervision End Date">
-          <value format="yyyy/MM" type="YearMonth">2022/2</value>
-        </field>
-        <field id="3c504aafda28418ea439d8f92c28aef0" label="Student Name">
-          <value type="String">Jacob Bendle</value>
-        </field>
-        <field id="e36ccf9a00a241dc942e608df32c8c84" label="Student Institution">
-          <value type="String">University of Northern British Columbia</value>
-        </field>
-        <field id="bb322e0195b540779bf4bdb4f1a04210" label="Student Canadian Residency Status" />
-        <field id="5b8638e8646448dcb8edef2c21e01c87" label="Degree Type or Postdoctoral Status">
-          <lov id="e0b26301c88d4be5a6f7143981c9b3bb">Post-doctorate</lov>
-        </field>
-        <field id="e5d331dca0fc4000992e43b695b2db21" label="Student Degree Status" />
-        <field id="3cf3d0de12f44222b941fdbf57ad51a6" label="Student Degree Start Date">
-          <value format="yyyy/MM" type="YearMonth" />
-        </field>
-        <field id="8284dbdd03aa4277b7fca7662bd1758c" label="Student Degree Received Date">
-          <value format="yyyy/MM" type="YearMonth" />
-        </field>
-        <field id="ab1293e2fee8472481457d4f8493c7f1" label="Student Degree Expected Date">
-          <value format="yyyy/MM" type="YearMonth" />
-        </field>
-        <field id="420e5bbd57104c3c9823b5e6850ee6f8" label="Thesis/Project Title">
-          <value type="String">Relation of lake sedimentation to glacier dynamics, Owikeno Lake Basin, Central Coast, British Columbia, Canada</value>
-        </field>
-        <field id="804797ed2fe54da88f326743e38e270e" label="Project Description">
-          <value type="Bilingual" />
-          <bilingual>
-            <french />
-            <english />
-          </bilingual>
-        </field>
-        <field id="0f2f1601c24144308e0966d75b781db9" label="Present Position">
-          <value type="String">Postdoctoral Fellow</value>
-        </field>
-        <field id="8789e49ef39b4249aa53d414045ebfd2" label="Degree Name">
-          <value type="Bilingual" />
-          <bilingual />
-        </field>
-        <field id="17957ada91964db18a3b0526f5b4e341" label="Specialization">
-          <value type="Bilingual" />
-          <bilingual />
-        </field>
-        <field id="c20e3ae276a2429d888ae8e16216182f" label="Present Organization">
-          <value type="String">UNBC</value>
         </field>
       </section>
       <section id="4b36fa1eef2549f6ab3a3df7c1c81e0b" label="Student/Postdoctoral Supervision" recordId="0d8c2f53ca914a048d2585e84faec753">
@@ -5626,63 +5404,6 @@ single grains of sand</value>
         </field>
         <field id="420e5bbd57104c3c9823b5e6850ee6f8" label="Thesis/Project Title">
           <value type="String">Trends in albedo, western Canadian glaciers</value>
-        </field>
-        <field id="804797ed2fe54da88f326743e38e270e" label="Project Description">
-          <value type="Bilingual" />
-          <bilingual>
-            <french />
-            <english />
-          </bilingual>
-        </field>
-        <field id="0f2f1601c24144308e0966d75b781db9" label="Present Position">
-          <value type="String">Research Scientist</value>
-        </field>
-        <field id="8789e49ef39b4249aa53d414045ebfd2" label="Degree Name">
-          <value type="Bilingual" />
-          <bilingual />
-        </field>
-        <field id="17957ada91964db18a3b0526f5b4e341" label="Specialization">
-          <value type="Bilingual" />
-          <bilingual />
-        </field>
-        <field id="c20e3ae276a2429d888ae8e16216182f" label="Present Organization">
-          <value type="String">Polar Knowledge Canada</value>
-        </field>
-      </section>
-      <section id="4b36fa1eef2549f6ab3a3df7c1c81e0b" label="Student/Postdoctoral Supervision" recordId="c965dc06f77446fdb730db831cccc7ba">
-        <field id="78a3e68f1ab74f31b9284c2acdb70739" label="Supervision Role">
-          <lov id="00000000000000000000000100002900">Principal Supervisor</lov>
-        </field>
-        <field id="19964df0a8524f2bb44d5eb53729f9cc" label="Supervision Start Date">
-          <value format="yyyy/MM" type="YearMonth">2019/9</value>
-        </field>
-        <field id="bd3619f7970441dc83ada1d2fdbf0780" label="Supervision End Date">
-          <value format="yyyy/MM" type="YearMonth">2020/8</value>
-        </field>
-        <field id="3c504aafda28418ea439d8f92c28aef0" label="Student Name">
-          <value type="String">Williamson, Scott</value>
-        </field>
-        <field id="e36ccf9a00a241dc942e608df32c8c84" label="Student Institution">
-          <value type="String">UNBC</value>
-        </field>
-        <field id="bb322e0195b540779bf4bdb4f1a04210" label="Student Canadian Residency Status" />
-        <field id="5b8638e8646448dcb8edef2c21e01c87" label="Degree Type or Postdoctoral Status">
-          <lov id="e0b26301c88d4be5a6f7143981c9b3bb">Post-doctorate</lov>
-        </field>
-        <field id="e5d331dca0fc4000992e43b695b2db21" label="Student Degree Status">
-          <lov id="00000000000000000000000000000068">Completed</lov>
-        </field>
-        <field id="3cf3d0de12f44222b941fdbf57ad51a6" label="Student Degree Start Date">
-          <value format="yyyy/MM" type="YearMonth">2019/9</value>
-        </field>
-        <field id="8284dbdd03aa4277b7fca7662bd1758c" label="Student Degree Received Date">
-          <value format="yyyy/MM" type="YearMonth">2020/8</value>
-        </field>
-        <field id="ab1293e2fee8472481457d4f8493c7f1" label="Student Degree Expected Date">
-          <value format="yyyy/MM" type="YearMonth" />
-        </field>
-        <field id="420e5bbd57104c3c9823b5e6850ee6f8" label="Thesis/Project Title">
-          <value type="String">Accelerated mass loss and albedo change</value>
         </field>
         <field id="804797ed2fe54da88f326743e38e270e" label="Project Description">
           <value type="Bilingual" />
