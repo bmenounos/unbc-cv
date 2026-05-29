@@ -15,6 +15,9 @@ ET.register_namespace('generic-cv', NS)
 def new_id():
     return uuid.uuid4().hex
 
+def local(tag):
+    return tag.split('}')[-1] if '}' in tag else tag
+
 def mksec(parent, label, record_id=None):
     el = ET.SubElement(parent, 'section', label=label)
     if record_id:
@@ -62,31 +65,33 @@ bib_path    = os.path.join(data_dir, 'publications.bib')
 source_path = os.path.join(data_dir, 'CCV_source.xml')
 out_path    = os.path.join(data_dir, 'CCV.xml')
 
-# If a pre-cleaned CCV XML exists, copy its Publications section directly.
+# Start from CCV_source.xml if available (preserves presentations, media, etc.)
+# but always rebuild the Publications section from the bib file.
 if os.path.exists(source_path):
-    import shutil, re as _re
-    shutil.copy2(source_path, out_path)
-    # Count publications for reporting
-    _tree = ET.parse(out_path)
-    _root = _tree.getroot()
-    def _local(t): return t.split('}')[-1] if '}' in t else t
-    arts   = sum(1 for s in _root.iter() if _local(s.tag)=='section' and s.get('label')=='Journal Articles' and s.get('recordId'))
-    chaps  = sum(1 for s in _root.iter() if _local(s.tag)=='section' and s.get('label')=='Book Chapters'    and s.get('recordId'))
-    repts  = sum(1 for s in _root.iter() if _local(s.tag)=='section' and s.get('label')=='Reports'          and s.get('recordId'))
-    print(f'Written: {out_path}  (from CCV_source.xml)')
-    print(f'  Journal articles : {arts}')
-    print(f'  Book chapters    : {chaps}')
-    print(f'  Reports          : {repts}')
-    raise SystemExit(0)
+    tree = ET.parse(source_path)
+    root = tree.getroot()
+    # Remove existing Publications subsection so we rebuild it from bib
+    for contrib in root:
+        if local(contrib.tag) == 'section' and contrib.get('label') == 'Contributions':
+            for pub_sec in list(contrib):
+                if local(pub_sec.tag) == 'section' and pub_sec.get('label') == 'Publications':
+                    contrib.remove(pub_sec)
+    contrib = None
+    for ch in root:
+        if local(ch.tag) == 'section' and ch.get('label') == 'Contributions':
+            contrib = ch; break
+    if contrib is None:
+        contrib = mksec(root, 'Contributions')
+else:
+    root    = ET.Element(f'{{{NS}}}generic-cv')
+    contrib = mksec(root, 'Contributions')
+
+pub_cont = mksec(contrib, 'Publications')
 
 with open(bib_path, encoding='utf-8') as f:
     parser = BibTexParser(common_strings=True)
     parser.ignore_nonstandard_types = False
     bib = bibtexparser.load(f, parser)
-
-root = ET.Element(f'{{{NS}}}generic-cv')
-contrib  = mksec(root, 'Contributions')
-pub_cont = mksec(contrib, 'Publications')
 
 counts = {'articles': 0, 'chapters': 0, 'reports': 0, 'other': 0}
 
