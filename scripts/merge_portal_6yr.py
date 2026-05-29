@@ -80,17 +80,6 @@ if f_act is not None:
         ed_count = sum(1 for ch in p_adm if local(ch.tag)=='section' and ch.get('label')=='Editorial Activities')
         print(f'Administrative Activities (editorial records: {ed_count}) from portal')
 
-# 5. Research Funding History: replace with portal version (complete with Funding Sources + Other Investigators)
-for ch in list(f_root):
-    if local(ch.tag) == 'section' and ch.get('label') == 'Research Funding History':
-        f_root.remove(ch)
-n = 0
-for ch in p_root:
-    if local(ch.tag) == 'section' and ch.get('label') == 'Research Funding History':
-        f_root.append(copy.deepcopy(ch))
-        n += 1
-print(f'Research Funding History records from portal: {n}')
-
 # Write output
 ET.indent(f_tree, space='  ')
 buf = io.BytesIO()

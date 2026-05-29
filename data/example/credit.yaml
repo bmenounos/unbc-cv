@@ -1,0 +1,68 @@
+# CRediT contributor role annotations  (https://credit.niso.org/)
+# ─────────────────────────────────────────────────────────────────
+# Two-letter codes — list only the roles B. Menounos contributed.
+# Roles are sorted alphabetically in all output.
+#
+#   co  Conceptualization       dc  Data curation          fa  Formal analysis
+#   fu  Funding acquisition     in  Investigation          me  Methodology
+#   pa  Project administration  re  Resources              so  Software
+#   su  Supervision             va  Validation             vi  Visualization
+#   wo  Writing – original draft                           wr  Writing – review & editing
+#
+# Key = DOI (no "doi:" prefix).  Missing entry → no annotation shown.
+# Enable:  bash make_all.sh example --credit
+
+# ── 2026 ──────────────────────────────────────────────────────────────────────
+"10.5194/tc-20-811-2026":      [co, fa, fu, su, wo, wr]   # Satellite telemetry surface ablation
+"10.5194/essd-18-1665-2026":   [co, fa, fu, su, wo, wr]   # Global mapping lake-terminating glaciers
+"10.1177/09596836251387253":   [co, fa, fu, su, wo, wr]   # Glacier retreat Little Ice Age to 2020
+"10.1017/aog.2026.10043":      [co, fa, fu, su, wo, wr]   # Helm Glacier projected to vanish
+
+# ── 2025 ──────────────────────────────────────────────────────────────────────
+"10.5194/gchron-7-157-2025":   [co, fa, fu, su, wo, wr]   # TCN Bedrock Depth Profiles
+"10.1088/1748-9326/adc9ca":    [co, fa, fu, su, wo, wr]   # Glaciers western North America exceptional transition
+"10.1038/s43247-025-02503-x":  [co, fa, fu, su, wo, wr]   # Temperature mediated albedo decline
+"10.1038/s41586-024-08545-z":  [co, fa, fu, su, wo, wr]   # Community estimate global glacier mass changes
+"10.1029/2025GL115235":        [co, fa, fu, su, wo, wr]   # Glaciers Western Canada-Conterminous US & Switzerland
+"10.1029/2024JF008126":        [co, fa, fu, su, wo, wr]   # Land-to-sea sediment fluxes glacial lake outburst flood
+"10.1016/j.gloplacha.2025.105044": [co, fa, fu, su, wo, wr]  # Climate sensitivities and mass balance
+"10.1002/esp.70089":           [co, fa, fu, su, wo, wr]   # Holocene landslides Fraser Canyon
+
+# ── 2024 ──────────────────────────────────────────────────────────────────────
+"10.5194/tc-18-889-2024":      [co, fa, fu, su, wo, wr]   # Recent estimates glacier mass loss
+"10.5194/tc-18-5551-2024":     [co, fa, fu, su, wo, wr]   # Pleiades Glacier Observatory
+"10.26443/seismica.v3i1.1186": [co, fa, fu, su, wo, wr]   # Mapping fault geomorphology drone lidar
+"10.1080/17445647.2024.2378000": [co, fa, fu, su, wo, wr] # Glacial geomorphology Cordillera Darwin
+"10.1080/15481603.2024.2427326": [co, fa, fu, su, wo, wr] # Airborne lidar intensity correction snow
+"10.1017/qua.2023.63":         [co, fa, fu, su, wo, wr]   # Glacier fluctuation chronology Pleistocene
+"10.1007/s10584-024-03683-9":  [co, fa, fu, su, wo, wr]   # Climatic effects Williston Reservoir
+
+# ── 2023 ──────────────────────────────────────────────────────────────────────
+"10.5194/tc-17-5459-2023":     [co, fa, fu, su, wo, wr]   # Four North American glaciers advanced
+"10.5194/tc-17-4381-2023":     [co, fa, fu, su, wo, wr]   # Late Holocene glacier Mackenzie Mountains
+"10.5194/tc-17-1457-2023":     [co, fa, fu, su, wo, wr]   # Snowmelt characterization optical SAR
+"10.1130/abs/2023CD-387536":   [co, fa, fu, su, wo, wr]   # Late Pleistocene glacial history Mt Rainier
+"10.1017/jog.2022.83":         [co, fa, fu, su, wo, wr]   # Surface mass-balance geodetic data
+"10.1016/j.rse.2023.113849":   [co, fa, fu, su, wo, wr]   # Airborne to spaceborne imaging spectroscopy
+"10.1002/esp.5702":            [co, fa, fu, su, wo, wr]   # Structural control bedrock river
+
+# ── 2022 ──────────────────────────────────────────────────────────────────────
+"10.5194/tc-16-3071-2022":     [co, fa, fu, su, wo, wr]   # Glacier mass balance climate sensitivity
+"10.5194/gchron-4-311-2022":   [co, fa, fu, su, wo, wr]   # Last Glacial Maximum absence
+"10.3389/feart.2022.916069":   [co, fa, fu, su, wo, wr]   # Elliot Creek Landslide kinematic analysis
+"10.1029/2022JF006670":        [co, fa, fu, su, wo, wr]   # Glaciers Olympic Mountains
+"10.1029/2021JF006439":        [co, fa, fu, su, wo, wr]   # Declining basal motion Athabasca
+"10.1029/2021JB023444":        [co, fa, fu, su, wo, wr]   # Multistage rock avalanche runout
+"10.1029/2021GL097191":        [co, fa, fu, su, wo, wr]   # Cordilleran Ice Sheet stability
+"10.1029/2021GL096716":        [co, fa, fu, su, wo, wr]   # Landslide tsunami outburst flood 2020
+"10.1016/j.rse.2021.112862":   [co, fa, fu, su, wo, wr]   # Accelerated change glaciated environments
+"10.1007/s10584-022-03360-9":  [co, fa, fu, su, wo, wr]   # Future snow Columbia Mountains
+
+# ── 2021 ──────────────────────────────────────────────────────────────────────
+"10.5194/essd-13-2875-2021":   [co, fa, fu, su, wo, wr]   # Hydrometeorological glaciological data
+"10.1130/abs/2021AM-367713":   [co, fa, fu, su, wo, wr]   # Holocene glacier length American Cordillera
+"10.1016/j.rse.2021.112732":   [co, fa, fu, su, wo, wr]   # Forest fire aerosol air temperature
+"10.1016/j.quascirev.2021.107282": [co, fa, fu, su, wo, wr] # Late Holocene glacier advances tandem dating
+
+# ── 2020 ──────────────────────────────────────────────────────────────────────
+"10.1126/science.abo1324":     [co, fa, fu, su, wo, wr]   # Rounce et al. — global glacier projections (Science)

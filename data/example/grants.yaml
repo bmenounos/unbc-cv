@@ -25,8 +25,10 @@ competitive:
     amount_per_year: 400000
     start: 2020
     end: 2023
-    pi: "Carey, Menounos, Hayashi"
-    co_investigators: ["Nine others"]
+    my_role: Co-applicant
+    received: 30
+    pi: "Carey, S."
+    co_investigators: ["Hayashi, M.", "Nine others"]
   - agency: NSERC
     subject: Accelerator Grant
     amount_per_year: 40000
@@ -74,8 +76,10 @@ competitive:
     amount_per_year: 575361
     start: 2017
     end: 2019
-    pi: "Carey, Menounos, Hayashi"
-    co_investigators: ["Nine others"]
+    my_role: Co-applicant
+    received: 30
+    pi: "Carey, S."
+    co_investigators: ["Hayashi, M.", "Nine others"]
   - agency: NSERC
     subject: "RTI"
     amount_per_year: 147050

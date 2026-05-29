@@ -4,12 +4,33 @@ import xml.etree.ElementTree as ET
 import subprocess, os, sys, re, textwrap, datetime
 
 if len(sys.argv) < 2:
-    print('Usage: ccv_to_pdf.py <CCV.xml>', file=sys.stderr); sys.exit(1)
-XML_PATH = sys.argv[1]
-_dir     = os.path.dirname(os.path.abspath(XML_PATH))
-_stem    = os.path.basename(os.path.dirname(os.path.abspath(XML_PATH)))
-TEX_PATH = os.path.join(_dir, f'CV_{_stem}.tex')
-PDF_PATH = os.path.join(_dir, f'CV_{_stem}.pdf')
+    print('Usage: ccv_to_pdf.py <CCV.xml> [--credit]', file=sys.stderr); sys.exit(1)
+XML_PATH    = sys.argv[1]
+SHOW_CREDIT = '--credit' in sys.argv
+_dir        = os.path.dirname(os.path.abspath(XML_PATH))
+_stem       = os.path.basename(os.path.dirname(os.path.abspath(XML_PATH)))
+TEX_PATH    = os.path.join(_dir, f'CV_{_stem}.tex')
+PDF_PATH    = os.path.join(_dir, f'CV_{_stem}.pdf')
+NSERC_PATH  = os.path.join(_dir, f'CV_{_stem}_nserc_contributions.txt')
+
+# ── CRediT role annotations ────────────────────────────────────────────────────
+CREDIT_ROLES = {}   # DOI (lowercase) → sorted list of role codes
+_CREDIT_LEGEND = (
+    'Contributor roles (CRediT taxonomy, https://credit.niso.org/): '
+    'co=Conceptualization, dc=Data curation, fa=Formal analysis, '
+    'fu=Funding acquisition, in=Investigation, me=Methodology, '
+    'pa=Project administration, re=Resources, so=Software, '
+    'su=Supervision, va=Validation, vi=Visualization, '
+    'wo=Writing–original draft, wr=Writing–review & editing.'
+)
+if SHOW_CREDIT:
+    import yaml as _yaml
+    _credit_path = os.path.join(_dir, 'credit.yaml')
+    if os.path.exists(_credit_path):
+        with open(_credit_path, encoding='utf-8') as _f:
+            _raw = _yaml.safe_load(_f) or {}
+        CREDIT_ROLES = {k.lower().lstrip('doi:').lstrip('/').strip(): sorted(v)
+                        for k, v in _raw.items() if isinstance(v, list)}
 
 # ── XML helpers ───────────────────────────────────────────────────────────────
 
@@ -713,6 +734,8 @@ if supervisees:
 if pubs:
     A(r'\section{Refereed Journal Articles}')
     A(r'{\footnotesize $*$Supervised or co-supervised trainee}\\[4pt]')
+    if SHOW_CREDIT and CREDIT_ROLES:
+        A(r'{\footnotesize \textit{' + esc(_CREDIT_LEGEND) + r'}}\\[4pt]')
     A(r'{\small')
     A(r'\begin{enumerate}[leftmargin=2em,itemsep=3pt]')
     A(r'\setcounter{enumi}{' + str(len(pubs)) + r'}')
@@ -743,6 +766,10 @@ if pubs:
             line += f' ({esc(status)})'
         if doi:
             line += f'. \\href{{https://doi.org/{esc(doi)}}}{{doi:{esc(doi)}}}'
+        if SHOW_CREDIT and doi:
+            roles = CREDIT_ROLES.get(doi.lower().strip())
+            if roles:
+                line += r' \textnormal{\footnotesize [' + ', '.join(roles) + ']}'
         A(r'\item[\arabic{enumi}.]' + line)
         A(r'\addtocounter{enumi}{-1}')
     A(r'\end{enumerate}}')
@@ -967,3 +994,34 @@ print(f'  Other pres   : {len(other_pres)}')
 print(f'  Grants       : {len(grants)}')
 print(f'  Supervisees  : {len(supervisees)}')
 print(f'  Media        : {len(media)}')
+
+if SHOW_CREDIT and CREDIT_ROLES:
+    lines = [
+        'NSERC Discovery Grant — Most Significant Contributions',
+        '=' * 60,
+        '',
+        _CREDIT_LEGEND,
+        '',
+        'Publications (B. Menounos contributions in [brackets]):',
+        '-' * 60,
+        '',
+    ]
+    for i, pub in enumerate(pubs, 1):
+        authors = normalize_authors(pub['authors'])
+        yr = pub['year']; title = pub['title']
+        jrn = pub['journal']; vol = pub['vol']; pgs = pub['pages']
+        doi = pub['doi']; status = pub['status']
+        entry = f'{i:3}. {authors}, {yr}. {title}. {jrn}'
+        if vol: entry += f' {vol}'
+        if pgs: entry += f', {pgs}'
+        if 'press' in (status or '').lower() or 'review' in (status or '').lower():
+            entry += f' ({status})'
+        if doi: entry += f'. doi:{doi}'
+        if doi:
+            roles = CREDIT_ROLES.get(doi.lower().strip())
+            if roles:
+                entry += f' [{", ".join(roles)}]'
+        lines.append(entry)
+    with open(NSERC_PATH, 'w', encoding='utf-8') as _nf:
+        _nf.write('\n'.join(lines) + '\n')
+    print(f'NSERC contributions: {NSERC_PATH}')

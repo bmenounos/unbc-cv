@@ -7,6 +7,8 @@ NAME=${1:-example}
 DATA="data/$NAME"
 XML="$DATA/CCV.xml"
 XML6="$DATA/CCV_last6yrs.xml"
+CREDIT_FLAG=""
+for arg in "$@"; do [ "$arg" = "--credit" ] && CREDIT_FLAG="--credit"; done
 
 echo "=== Building CV for: $NAME ==="
 
@@ -17,7 +19,7 @@ python3 scripts/ccv_filter_6yrs.py "$XML" "$XML6"
 if [ -f "$DATA/CCV_source_6yr.xml" ]; then
     python3 scripts/merge_portal_6yr.py "$XML6" "$DATA/CCV_source_6yr.xml" "$XML6"
 fi
-python3 scripts/ccv_to_pdf.py   "$XML"
+python3 scripts/ccv_to_pdf.py   "$XML" $CREDIT_FLAG
 
 echo "=== Done ==="
 echo "  Full CCV XML : $XML"

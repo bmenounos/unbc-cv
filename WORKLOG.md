@@ -1,5 +1,41 @@
 # unbc-cv Build Log
 
+## Session: 2026-05-29
+
+### Changes
+
+**Grant architecture rewrite (`scripts/yaml_to_ccv.py`)**
+- `grants.yaml` is now the single authoritative source for all funding records — pipeline always rebuilds Research Funding History from scratch (no more manual portal intervention)
+- Added full CCV portal schema IDs for Research Funding History, Funding Sources, and Other Investigators sections and all fields
+- New `add_grant()` generates properly structured XML with: role (Principal Investigator / Co-investigator / Co-applicant via `my_role` override), status (Awarded if end ≥ 2026 else Completed), Total Funding = `amount_per_year × years` (overridable with `total:`), Portion of Funding Received (default 100, overridable with `received:`), Funding Competitive? (always Yes for competitive grants), co-applicants listed for grants with < 10 people
+- Fixed NameError: moved `_fv`, `_flov`, `_fempty`, `_fbil` helper functions before the grant section (were defined later in the file)
+- `ccv_filter_6yrs.py`: removed `Funding Sources` and `Other Investigators` from `STRIP_LABELS` so nested funding data survives the 6yr filter
+- `merge_portal_6yr.py`: removed the Research Funding History replacement block (grants.yaml is now authoritative; portal export no longer needed for funding)
+
+**`data/example/grants.yaml` fix**
+- CFREF Global Water Futures: corrected role to `Co-applicant`, received to `30%`, PI to "Carey, S."
+
+**CRediT taxonomy attribution (`scripts/ccv_to_pdf.py` + `make_all.sh`)**
+- New `--credit` flag: `bash make_all.sh example --credit` or `python3 scripts/ccv_to_pdf.py CCV.xml --credit`
+- Loads `data/<name>/credit.yaml` (DOI → list of 2-letter role codes, e.g. `[co, fa, fu, su, wo, wr]`)
+- Appends role codes in brackets after each DOI in PDF: `doi:10.5194/... [co, fa, fu, su, wo, wr]`
+- Legend added at top of Publications section explaining all 14 CRediT roles
+- Writes `CV_<name>_nserc_contributions.txt` — plain-text NSERC free-form contributions section with role annotations
+- Without `--credit`: PDF output is unchanged
+
+**`data/example/credit.yaml` (new file)**
+- DOI-keyed YAML file covering all 2020+ publications
+- Pre-populated with placeholder `[co, fa, fu, su, wo, wr]` for every entry
+- User should update each entry with their actual CRediT roles
+
+### Current pipeline output (`data/example/`)
+- `CCV.xml` — full career (153 articles, 59 grants built from grants.yaml)
+- `CCV_last6yrs.xml` — 6-yr filtered with complete funding data (no more blank fields)
+- `CV_example.pdf` — full-career PDF
+- `CV_example_nserc_contributions.txt` — NSERC contributions text (generated with `--credit`)
+
+---
+
 ## Session: 2026-05-28
 
 ### Changes

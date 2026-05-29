@@ -186,43 +186,162 @@ for sc in (s_data.get('supervisory_committee') or []):
                     'University of Northern British Columbia',
                     sc.get('start'), sc.get('finish'))
 
+# ── Field element helpers (used by grants, service, awards) ───────────────────
+
+def _fv(fid, label, text, typ='String', fmt_=None):
+    el = ET.Element('field', {'id': fid, 'label': label})
+    attrs = {'type': typ}
+    if fmt_: attrs['format'] = fmt_
+    v = ET.SubElement(el, 'value', attrs)
+    if text: v.text = str(text)
+    return el
+
+def _flov(fid, label, lov_id, lov_text):
+    el = ET.Element('field', {'id': fid, 'label': label})
+    v = ET.SubElement(el, 'lov', {'id': lov_id})
+    v.text = lov_text
+    return el
+
+def _fempty(fid, label):
+    return ET.Element('field', {'id': fid, 'label': label})
+
+def _fbil(fid, label, text=''):
+    el = ET.Element('field', {'id': fid, 'label': label})
+    v = ET.SubElement(el, 'value', {'type': 'Bilingual'})
+    if text: v.text = text
+    bil = ET.SubElement(el, 'bilingual')
+    ET.SubElement(bil, 'french')
+    eng = ET.SubElement(bil, 'english')
+    if text: eng.text = text
+    return el
+
 # ── grants.yaml → Research Funding History ────────────────────────────────────
 
 g_data = load(os.path.join(data_dir, 'grants.yaml'))
-_skip_grants = has_records(root, 'Research Funding History')
+
+_GF = {
+    'sec':    'aaedc5454412483d9131f7619d10279e',
+    'type':   '931b92a5ffed4e5aa9c7b3a0afd5f8ba',
+    'start':  '9c1db4674334436ca891b7b8a9e114bd',
+    'end':    'b63179ab0f0e4c9eaa7e9a8130d60ee3',
+    'title':  '735545eb499e4cc6a949b4b375a804e8',
+    'gtype':  'c8e3451d1e3a405bb1e8aa0ebeb66c8d',
+    'desc':   '0674312de78f4647aba3bf202a41d58e',
+    'clin':   'f7bfa6e647fd48cf8d404263df5843b1',
+    'status': '0991ead151e3445ca7537aa15acbec57',
+    'role':   '7496de092dc84038a1881e8f9d77e713',
+    'uptake': '32ce1c0c194447c19c6847b1915d35f1',
+}
+_GFS = {
+    'sec':      '376b8991609f46059a3d66028f005360',
+    'org':      '67e083b070954e91bcbb1cc70131145a',
+    'other_org':'1bdead14642545f3971a59997d82da67',
+    'program':  '97231512141a452a82151cc162e9a59c',
+    'ref':      '3fb9015d879f435d937ae9aa7ccd2973',
+    'total':    'dfe6a0b34347486aaa677f07306a141e',
+    'currency': '4775aa8f2a3f4f5083dd1c816462f260',
+    'received': '882a94c7548744ca992e2647346d2e14',
+    'recv_cur': 'b8ea355ed5ad4970bf1367fe0281b724',
+    'renew':    'a445f692a0d54760bcf2ed9c8a829eff',
+    'comp':     '00efdc7e790a48ac8675696c66afc3ad',
+    'src_s':    'd62313c1cdb9419caf79014f07e1cfe0',
+    'src_e':    'efc68e7d74f849eebb59f9a3bb85e5db',
+}
+_GFI = {
+    'sec':  'c7c473d1237b432fb7f2abd831130fb7',
+    'name': 'ddd551dfb26344fbb17f07afcffc94ed',
+    'role': '13806a6772d248158619261afaab2fe0',
+}
+_GF_TYPE_LOV = {
+    'Grant':          '00000000000000000000000100000900',
+    'Contract':       '00000000000000000000000100000904',
+    'Research Chair': '00000000000000000000000100000901',
+}
+_GF_ROLE_LOV = {
+    'Principal Investigator': '00000000000000000000000100002800',
+    'Co-investigator':        '00000000000000000000000100002801',
+    'Co-applicant':           '00000000000000000000000100002802',
+    'Principal Applicant':    '00000000000000000000000100002807',
+}
+_GF_COMP_LOV  = {'Yes': '00000000000000000000000000000400', 'No': '00000000000000000000000000000401'}
+_GF_STAT_LOV  = {'Awarded': '00000000000000000000000100000800', 'Completed': '00000000000000000000000100000802'}
+
+# Always rebuild from grants.yaml — clear any existing records from source XML
+for _ch in list(root):
+    if local(_ch.tag) == 'section' and _ch.get('label') == 'Research Funding History':
+        root.remove(_ch)
+
+import datetime as _dt
+_CURRENT_YR = _dt.date.today().year
 
 def add_grant(entry, competitive):
-    pi_str = str(entry.get('pi', ''))
-    is_pi  = 'Menounos' in pi_str or me in pi_str
-    role   = 'Principal Investigator' if is_pi else 'Co-Investigator'
+    pi_str  = str(entry.get('pi', ''))
+    is_pi   = 'Menounos' in pi_str or me in pi_str
+    my_role = entry.get('my_role', '')
+    if my_role:
+        role = my_role
+    elif competitive:
+        role = 'Principal Investigator' if is_pi else 'Co-investigator'
+    else:
+        role = 'Principal Applicant' if is_pi else 'Co-investigator'
 
-    sec = mksec(root, 'Research Funding History', new_id())
-    mkfield(sec, 'Funding Title',       value=entry.get('subject', ''))
-    mkfield(sec, 'Funding Start Date',  value=fmt(entry.get('start')))
-    mkfield(sec, 'Funding End Date',    value=fmt(entry.get('end')))
-    mkfield(sec, 'Funding Role',        value=role)
+    start_yr = int(str(entry.get('start', 0))[:4])
+    end_yr   = int(str(entry.get('end',   start_yr))[:4])
+    amt      = int(entry.get('amount_per_year', 0))
+    total    = entry.get('total', amt * (end_yr - start_yr + 1))
+    recv_pct = entry.get('received', 100)
+    status   = 'Awarded' if end_yr >= _CURRENT_YR else 'Completed'
+    ftype    = 'Contract' if not competitive else 'Grant'
 
-    src = mksec(sec, 'Funding Sources', new_id())
-    mkfield(src, 'Funding Organization', value=entry.get('agency', ''))
-    mkfield(src, 'Total Funding',        value=str(entry.get('amount_per_year', '')))
-    mkfield(src, 'Funding Competitive?', lov='Yes' if competitive else 'No')
+    sec = ET.SubElement(root, 'section',
+                        id=_GF['sec'], label='Research Funding History', recordId=new_id())
+    sec.append(_flov(_GF['type'],   'Funding Type',      _GF_TYPE_LOV[ftype], ftype))
+    sec.append(_fv  (_GF['start'],  'Funding Start Date', fmt(entry.get('start')), 'YearMonth', 'yyyy/MM'))
+    sec.append(_fv  (_GF['end'],    'Funding End Date',   fmt(entry.get('end')),   'YearMonth', 'yyyy/MM'))
+    sec.append(_fv  (_GF['title'],  'Funding Title',      entry.get('subject', '')))
+    sec.append(_flov(_GF['gtype'],  'Grant Type',         '00000000000000000000000100001001', 'Operating'))
+    sec.append(_fbil(_GF['desc'],   'Project Description'))
+    sec.append(_fempty(_GF['clin'], 'Clinical Research Project?'))
+    sec.append(_flov(_GF['status'], 'Funding Status',     _GF_STAT_LOV[status], status))
+    sec.append(_flov(_GF['role'],   'Funding Role',       _GF_ROLE_LOV.get(role, _GF_ROLE_LOV['Co-investigator']), role))
+    sec.append(_fbil(_GF['uptake'], 'Research Uptake'))
 
-    for co in (entry.get('co_investigators') or []):
-        if not co or co == me or 'Menounos' in str(co):
-            continue
-        inv = mksec(sec, 'Other Investigators', new_id())
-        mkfield(inv, 'Investigator Name', value=str(co))
-        mkfield(inv, 'Role', value='Co-Investigator')
-    if not is_pi:
-        inv = mksec(sec, 'Other Investigators', new_id())
-        mkfield(inv, 'Investigator Name', value=pi_str)
-        mkfield(inv, 'Role', value='Principal Investigator')
+    src = ET.SubElement(sec, 'section',
+                        id=_GFS['sec'], label='Funding Sources', recordId=new_id())
+    src.append(_fempty(_GFS['org'],      'Funding Organization'))
+    src.append(_fv    (_GFS['other_org'],'Other Funding Organization', entry.get('agency', '')))
+    src.append(_fempty(_GFS['program'],  'Program Name'))
+    src.append(_fempty(_GFS['ref'],      'Funding Reference Number'))
+    src.append(_fv    (_GFS['total'],    'Total Funding',           str(total), 'Number'))
+    src.append(_fempty(_GFS['currency'], 'Currency of Total Funding'))
+    src.append(_fv    (_GFS['received'], 'Portion of Funding Received', str(recv_pct), 'Number'))
+    src.append(_fempty(_GFS['recv_cur'], 'Currency of Portion of Funding Received'))
+    src.append(_fempty(_GFS['renew'],    'Funding Renewable?'))
+    src.append(_flov  (_GFS['comp'],     'Funding Competitive?',
+                       _GF_COMP_LOV['Yes' if competitive else 'No'],
+                       'Yes' if competitive else 'No'))
+    src.append(_fv    (_GFS['src_s'],    'Funding Start Date', '', 'YearMonth', 'yyyy/MM'))
+    src.append(_fv    (_GFS['src_e'],    'Funding End Date',   '', 'YearMonth', 'yyyy/MM'))
 
-if not _skip_grants:
-    for entry in (g_data.get('competitive') or []):
-        add_grant(entry, True)
-    for entry in (g_data.get('contracts') or []):
-        add_grant(entry, False)
+    cos = [c for c in (entry.get('co_investigators') or [])
+           if c and 'Menounos' not in str(c) and str(c) != me]
+    for co in cos:
+        inv = ET.SubElement(sec, 'section',
+                            id=_GFI['sec'], label='Other Investigators', recordId=new_id())
+        inv.append(_fv  (_GFI['name'], 'Investigator Name', str(co)))
+        inv.append(_flov(_GFI['role'], 'Role',
+                         '00000000000000000000000100002802', 'Co-applicant'))
+    if not is_pi and pi_str:
+        inv = ET.SubElement(sec, 'section',
+                            id=_GFI['sec'], label='Other Investigators', recordId=new_id())
+        inv.append(_fv  (_GFI['name'], 'Investigator Name', pi_str))
+        inv.append(_flov(_GFI['role'], 'Role',
+                         '00000000000000000000000100002800', 'Principal Investigator'))
+
+for entry in (g_data.get('competitive') or []):
+    add_grant(entry, True)
+for entry in (g_data.get('contracts') or []):
+    add_grant(entry, False)
 
 # ── service.yaml → Committee Memberships, Editorial Activities, ORA ───────────
 # Field and section IDs must match the CCV portal schema exactly.
@@ -270,33 +389,6 @@ _ED_PUBTYPE_LOV = {
     'Journal': '00000000000000000000000100001602',
 }
 _ORA_NOT_FOR_PROFIT = ('00000000000000000000000000000133', 'Not for Profit')
-
-def _fv(fid, label, text, typ='String', fmt_=None):
-    el = ET.Element('field', {'id': fid, 'label': label})
-    attrs = {'type': typ}
-    if fmt_: attrs['format'] = fmt_
-    v = ET.SubElement(el, 'value', attrs)
-    if text: v.text = str(text)
-    return el
-
-def _flov(fid, label, lov_id, lov_text):
-    el = ET.Element('field', {'id': fid, 'label': label})
-    v = ET.SubElement(el, 'lov', {'id': lov_id})
-    v.text = lov_text
-    return el
-
-def _fempty(fid, label):
-    return ET.Element('field', {'id': fid, 'label': label})
-
-def _fbil(fid, label, text=''):
-    el = ET.Element('field', {'id': fid, 'label': label})
-    v = ET.SubElement(el, 'value', {'type': 'Bilingual'})
-    if text: v.text = text
-    bil = ET.SubElement(el, 'bilingual')
-    ET.SubElement(bil, 'french')
-    eng = ET.SubElement(bil, 'english')
-    if text: eng.text = text
-    return el
 
 svc = load(os.path.join(data_dir, 'service.yaml'))
 
