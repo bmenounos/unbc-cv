@@ -14,7 +14,7 @@ PDF_PATH    = os.path.join(_dir, f'CV_{_stem}.pdf')
 NSERC_PATH  = os.path.join(_dir, f'CV_{_stem}_nserc_contributions.txt')
 
 # ── CRediT role annotations ────────────────────────────────────────────────────
-CREDIT_ROLES = {}   # DOI (lowercase) → sorted list of role codes
+CREDIT_ROLES = {}   # normalized title → sorted list of role codes
 _CREDIT_LEGEND = (
     'Contributor roles (CRediT taxonomy, https://credit.niso.org/): '
     'co=Conceptualization, dc=Data curation, fa=Formal analysis, '
@@ -23,14 +23,36 @@ _CREDIT_LEGEND = (
     'su=Supervision, va=Validation, vi=Visualization, '
     'wo=Writing–original draft, wr=Writing–review & editing.'
 )
+
+def _norm_title(t):
+    return re.sub(r'\s+', ' ', re.sub(r'[{}\\]', '', t).lower().strip())
+
+def _bib_field(entry_text, field):
+    """Extract a BibTeX field value handling nested braces."""
+    m = re.search(rf'\b{field}\s*=\s*\{{', entry_text, re.IGNORECASE)
+    if not m:
+        return None
+    start = m.end(); depth = 1
+    for i, c in enumerate(entry_text[start:], start):
+        if c == '{': depth += 1
+        elif c == '}':
+            depth -= 1
+            if depth == 0:
+                return entry_text[start:i]
+    return None
+
 if SHOW_CREDIT:
-    import yaml as _yaml
-    _credit_path = os.path.join(_dir, 'credit.yaml')
-    if os.path.exists(_credit_path):
-        with open(_credit_path, encoding='utf-8') as _f:
-            _raw = _yaml.safe_load(_f) or {}
-        CREDIT_ROLES = {k.lower().lstrip('doi:').lstrip('/').strip(): sorted(v)
-                        for k, v in _raw.items() if isinstance(v, list)}
+    _bib_path = os.path.join(_dir, 'publications.bib')
+    if os.path.exists(_bib_path):
+        _bib_text = open(_bib_path, encoding='utf-8').read()
+        for _entry in re.split(r'(?=^@)', _bib_text, flags=re.MULTILINE):
+            _title  = _bib_field(_entry, 'title')
+            _credit = _bib_field(_entry, 'credit')
+            if _title and _credit:
+                _key   = _norm_title(_title)
+                _roles = sorted(r.strip() for r in _credit.split(',') if r.strip())
+                if _roles:
+                    CREDIT_ROLES[_key] = _roles
 
 # ── XML helpers ───────────────────────────────────────────────────────────────
 
@@ -766,8 +788,8 @@ if pubs:
             line += f' ({esc(status)})'
         if doi:
             line += f'. \\href{{https://doi.org/{esc(doi)}}}{{doi:{esc(doi)}}}'
-        if SHOW_CREDIT and doi:
-            roles = CREDIT_ROLES.get(doi.lower().strip())
+        if SHOW_CREDIT:
+            roles = CREDIT_ROLES.get(_norm_title(pub['title']))
             if roles:
                 line += r' \textnormal{\footnotesize [' + ', '.join(roles) + ']}'
         A(r'\item[\arabic{enumi}.]' + line)
@@ -1017,10 +1039,9 @@ if SHOW_CREDIT and CREDIT_ROLES:
         if 'press' in (status or '').lower() or 'review' in (status or '').lower():
             entry += f' ({status})'
         if doi: entry += f'. doi:{doi}'
-        if doi:
-            roles = CREDIT_ROLES.get(doi.lower().strip())
-            if roles:
-                entry += f' [{", ".join(roles)}]'
+        roles = CREDIT_ROLES.get(_norm_title(pub['title']))
+        if roles:
+            entry += f' [{", ".join(roles)}]'
         lines.append(entry)
     with open(NSERC_PATH, 'w', encoding='utf-8') as _nf:
         _nf.write('\n'.join(lines) + '\n')
